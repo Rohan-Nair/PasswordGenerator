@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Titillium+Web:wght@300&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --pink: #f72585;
+  --pinkPurple: #b5179e;
+  --purple: #7209b7;
+  --dPurple: #560bad;
+  --ddPurple: #480ca8;
+  --dddBlue: #3a0ca3;
+  --ddBlue: #3f37c9;
+  --dBlue: #4361ee;
+  --blue: #4895ef;
+  --yello: #ffbe0b;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(114, 9, 183, 1) 35%,
+    rgb(146, 91, 182) 100%
+  );
+}
+
+.base {
+  height: 70vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    270deg,
+    rgba(245, 126, 180, 1) 35%,
+    rgba(181, 58, 114, 1) 100%
+  );
+  border-radius: 30px;
+  box-shadow: -5px -1px 0px #000, -5px -5px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.heading1 {
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.2;
+  text-shadow: -5px -1px 0px #000, -5px -5px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: var(--yello);
+  letter-spacing: 2px;
+  font-family: "Bagel Fat One", cursive;
+  font-size: 40px;
+  padding: 6px;
+}
+
+.displaycontainer {
+  position: relative;
+  background: linear-gradient(
+    270deg,
+    rgb(89, 47, 66) 35%,
+    rgba(181, 58, 114, 1) 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: -3px -1px 0px #000, -5px -5px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  width: 400px;
+}
+
+.display {
+  background-color: transparent;
+  border: none;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #65c7ba;
+  text-shadow: -2px -1px 0px #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.display:focus {
+  /* accessibility bad practice to remove outline from input tags since Users using screen readers will not be able to see where their pointer is focused at. but in this case ok since it is a readonly input */
+  outline: none;
+}
+
+.display::placeholder {
+  color: #65c7ba;
+  text-shadow: -2px -1px 0px #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.inputcontainer {
+  background: linear-gradient(
+    270deg,
+    rgb(89, 47, 66) 35%,
+    rgba(181, 58, 114, 1) 100%
+  );
+  width: 400px;
+  box-shadow: -3px -1px 0px #000, -5px -5px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 0px;
+  padding: 10px 30px;
+}
+
+.length-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  margin: 10px 0;
+}
+
+.length-container > p {
+  color: var(--yello);
+  font-family: "Bagel Fat One", cursive;
+  font-size: 24px;
+  text-shadow: -2px -1px 0px #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+/* .slider {
+  margin: 10px 20px;
+} */
+
+.slider {
+  appearance: none;
+  cursor: pointer;
+  background: linear-gradient(270deg, var(--blue) 35%, var(--dBlue) 100%);
+  border-radius: 10px;
+  box-shadow: -5px -3px 0px #000, -3px -3px 0 #000, -3px -2px 0 #000,
+    1px 1px 0 #000;
+  /* margin-top: 0.5rem;
+  margin-bottom: 1rem; */
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--yello);
+  cursor: pointer;
+  transition: all 100ms ease-in;
+  margin: 3px 0;
+  box-shadow: -3px -2px 0px #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.slider::-moz-range-thumb {
+  appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--yello);
+  cursor: pointer;
+  transition: all 100ms ease-in;
+  margin: 3px 0;
+  box-shadow: -3px -2px 0px #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+/* .chkboxcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  background: #000;
+} */
+
+.chkbox {
+  padding: 0 10px;
+  margin: 0px 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.ipchk {
+  appearance: none;
+  height: 13px;
+  width: 13px;
+  border: 1px solid black;
+  box-shadow: -2px -1px 0px #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  position: relative;
+  background-color: var(--dBlue);
+  border-radius: 2px;
+}
+
+.ipchk:checked::before {
+  content: "+";
+  position: absolute;
+  color: var(--yello);
+  font-size: 1rem;
+  top: -30%;
+  left: 7%;
+}
+
+.iplabel {
+  color: #65c7ba;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: -2px -1px 0px #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.strengthContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 20px;
+  padding: 0px 10px 10px 10px;
+}
+
+.strengthContainer p {
+  color: var(--yello);
+  font-family: "Bagel Fat One", cursive;
+  font-size: 24px;
+  text-shadow: -2px -1px 0px #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.strengthContainer div {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #bebebe;
+  box-shadow: 0px 0px 5px #bebebe;
+}
+
+.generateButton {
+  background: linear-gradient(270deg, var(--blue) 35%, var(--dBlue) 100%);
+  color: var(--yello);
+  font-family: "Bagel Fat One", cursive;
+  font-size: 24px;
+  text-shadow: -2px -1px 0px #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 5px 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: -3px -1px 0px #000, -5px -5px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.data-copy {
+  background-color: transparent;
+  border: none;
+  color: #65c7ba;
+  cursor: pointer;
+}
+
+.data-copyMsg {
+  position: absolute;
+  right: 35px;
+  top: 10px;
+  background-color: var(--pinkPurple);
+  color: var(--yello);
+  font-family: "Titillium Web", sans-serif;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: bold;
+  text-shadow: -2px -1px 0px #000, -1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+  padding: 5px 10px;
+  border-radius: 1rem;
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: right;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
+
+.data-copyMsg.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .base {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .heading1 {
+    font-size: 30px;
+  }
+
+  .displaycontainer {
+    width: 100%;
+    margin: 0px 0px;
+  }
+
+  .display {
+    font-size: 20px;
+  }
+
+  .inputcontainer {
+    width: 100%;
+    margin: 0px 0px;
+  }
+
+  .length-container {
+    padding: 0px 10px;
+  }
+
+  .slider {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .chkbox {
+    padding: 0px 5px;
+  }
+
+  .iplabel {
+    font-size: 18px;
+  }
+
+  .strengthContainer {
+    margin: 0px 10px;
+    padding: 0px 5px 5px 5px;
+  }
+
+  .generateButton {
+    padding: 5px;
+  }
+}

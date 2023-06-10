@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/keyhole.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="base">
+
+            <h1 class="heading1">Password Generator</h1>
+
+            <div class="displaycontainer">
+
+                <!-- data-pwdDisplay in the input tag is custom attribute and will allow it to be fetched by querySelector using that name  -->
+                <input readonly placeholder="Password" class="display" data-passwordDisplay>
+
+                <button class="data-copy" data-copy>
+                    <span class="data-copyMsg" data-copyMsg></span>
+                    <img src="img/copy.svg" alt="copy button" width="23" height="23">
+                </button>
+
+            </div>
+
+            <div class="inputcontainer">
+
+
+                <div class="length-container">
+                    <p>Password Length</p>
+                    <p data-lengthNumber>0</p>
+                </div>
+
+
+                <input type="range" min="1" max="10" class="slider" step="1" data-lengthSlider>
+
+                <!-- <div class="chkboxcontainer"> -->
+                <div class="chkbox">
+                    <input class="ipchk" type="checkbox" id="uppercase">
+                    <label class="iplabel" for="uppercase">Includes Uppercase letters</label>
+                </div>
+
+                <div class="chkbox">
+                    <input class="ipchk" type="checkbox" id="lowercase">
+                    <label class="iplabel" for="lowercase">Includes Lowercase letters</label>
+                </div>
+
+                <div class="chkbox">
+                    <input class="ipchk" type="checkbox" id="numbers">
+                    <label class="iplabel" for="numbers">Includes Numbers</label>
+                </div>
+
+                <div class="chkbox">
+                    <input class="ipchk" type="checkbox" id="symbols">
+                    <label class="iplabel" for="symbols">Includes Symbols</label>
+                </div>
+
+                <!-- </div> -->
+
+                <div class="strengthContainer">
+                    <p>Strength</p>
+                    <div data-indicator></div>
+                </div>
+
+                <button class="generateButton">Generate Pasword</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
